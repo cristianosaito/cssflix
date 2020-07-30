@@ -32,7 +32,6 @@ function CadastroCategoria() {
   // ============
 
   useEffect(() => {
-    if(window.location.href.includes('localhost')) {
       const URL = 'https://css-flix.herokuapp.com/categorias'; 
       fetch(URL)
        .then(async (respostaDoServer) =>{
@@ -43,7 +42,7 @@ function CadastroCategoria() {
         }
         throw new Error('Não foi possível pegar os dados');
        })
-    }    
+        
   }, []);
 
   return (
